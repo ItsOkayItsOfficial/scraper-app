@@ -10,15 +10,14 @@
 
 
 // REQUIRE - New mongoose schema
-var mongoose = require('mongoose')
+const mongoose = require('mongoose')
 	, Schema = mongoose.Schema;
 
 // SCHEMA - Scrapped data
-var ScrapedDataSchema = Schema({
+const ScrapedDataSchema = Schema({
 	title: {
 		type: String,
 		required: true,
-		// REPEAT - Make sure is unique
 		unique: true
 	},
 	imgURL: {
@@ -41,7 +40,7 @@ var ScrapedDataSchema = Schema({
 });
 
 // MODEL - Schema to model variable
-var ScrapedData = mongoose.model('ScrapedData', ScrapedDataSchema);
+const ScrapedData = mongoose.model('ScrapedData', ScrapedDataSchema);
 
 // EXPORT - For import
 module.exports = ScrapedData;
