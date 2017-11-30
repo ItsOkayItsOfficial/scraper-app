@@ -102,5 +102,4 @@ function comments(object) {
     var $p = $('<p>').html('<span class="number">' + (i + 1) + '</span> ' + object[i].text + ' <a href="#" class="remove" data-id="' + object[i]._id + '">X</a>');
     $commentHolder.append($p);
   }
-  $('#arms2>div.comments').append($commentHolder);
 }
